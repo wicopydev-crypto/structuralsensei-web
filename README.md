@@ -1,26 +1,30 @@
 Structural Sensei Official Website
-This repository hosts the official static website for Structural Sensei.
+This repository hosts the official static website for Structural Sensei. It acts as the central directory for all our high-leverage resources designed to guide engineers in mastering their careers and achieving financial independence.
 
-💡 Project Mission
-Structural Sensei is your dedicated mentor for mastering engineering expertise, career growth, and achieving financial independence as a technical professional. Our core mission is to bridge the gap between academic knowledge and real-world professional success, delivering high-leverage guidance you won't find in a standard curriculum.
+🚀 Technology & Deployment
+This is a simple, static front-end project.
 
-📚 Resources & Platforms
-This site serves as the central directory for our complete suite of engineer resources, including:
+Core: HTML5 and CSS3.
 
-Digital Shop (Gumroad): E-books and guides on business, finance, and personal development tailored for engineers.
+Hosting: Deployed via Firebase Hosting for reliability and speed.
 
-Resource Hub (Carrd.co): Actionable advice on career progression and personal finance.
+📚 Core Mission & Content
+Structural Sensei focuses on bridging the gap between academic knowledge and real-world success, covering:
 
-Video Tutorials (YouTube): Deep dives and discussions on advanced engineering concepts and professional development.
+Engineering Expertise
 
-🛠 Technology & Status
-This project is a simple, static HTML/CSS website.
+Career Growth Strategies
 
-Hosting: Deployed and managed via Firebase Hosting.
+Financial Independence for Technical Professionals
 
-Status: Structural Sensei is currently a small business expanding its expertise into knowledge transfer and is in an exciting phase of development.
+The site links to our full suite of resources, including our digital shop (Gumroad), Resource Hub, and YouTube tutorials.
 
-✉️ Contact
-For collaborations, support questions, or feedback, please reach out via email: hello@structuralsensei.com (Note: Email address may be partially protected in the live site source)
+⚖️ Licensing
+We use separate licenses for the code and the proprietary content.
 
-© 2025 Structural Sensei. All rights reserved.
+Code License: The source code (HTML, CSS) in this repository is released under the MIT License.
+
+Content Copyright: All proprietary text, mission statements, and branding are © 2025 Structural Sensei. All rights reserved.
+
+📧 Contact
+For collaborations, support, or general inquiries, please email: wico.pydev@gmail.com
