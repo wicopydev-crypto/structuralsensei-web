@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structural Sensei - Empowering Engineers</title>
+
+    <meta name="description" content="Structural Sensei: Your guide to mastering engineering, career growth, and financial independence. Resources for technical professionals.">
+    <meta property="og:title" content="Structural Sensei - Empowering Engineers">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="YOUR_IPFS_HASH_HERE">
+    <meta name="author" content="Structural Sensei">
+
+    <style>
+        /* CSS Variables (Best Practice for Color Management) */
+        :root {
+            --color-primary: #ff5722; /* SS-Orange accent */
+            --color-dark: #1e293b;    /* Hero/Footer background */
+            --color-text: #1a1a1a;
+            --color-light-bg: #f9f9f9;
+            --font-size-base: 1.125rem; /* ~18px for better reading */
+        }
+
+        /* BASE RESET & TYPOGRAPHY */
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: var(--color-text);
+            line-height: 1.6;
+            background-color: #ffffff;
+            font-size: var(--font-size-base); /* Base font size set */
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            margin-top: 0;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: 3.8rem; } /* Adjusted size for better hierarchy */
+        h2 { font-size: 2.2rem; }
+        h3 { font-size: 1.4rem; }
+
+        a {
+            color: var(--color-text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--color-primary);
+        }
+
+        /* Accessibility: Visual feedback for keyboard users */
+        a:focus-visible, .btn:focus-visible {
+            outline: 3px solid var(--color-primary);
+            outline-offset: 2px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER & NAVIGATION */
+        .header {
+            position: sticky;
+            top: 0;
+            background: #ffffff;
+            border-bottom: 1px solid #eee;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .logo-accent {
+            color: var(--color-primary);
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 1.5rem; /* Using rem for consistent spacing */
+        }
+
+        .nav-menu a {
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        /* NAVIGATION SWORD-SLICE/UNDERLINE EFFECT */
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: var(--color-primary);
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-out;
+            transform-origin: bottom left;
+        }
+
+        .nav-menu a:hover::after {
+            transform: scaleX(1);
+        }
+
+
+        /* BUTTONS & CTAS */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.8rem; /* Using rem */
+            border: 2px solid var(--color-text);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-right: 1rem;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            border-color: var(--color-primary);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: #e64a19;
+            border-color: #e64a19;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--color-text);
+            border-color: var(--color-text);
+        }
+
+        .btn-secondary:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Centered Text Container for Intro/Mission Sections */
+        .text-centered-block {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* SECTIONS (Increased Spacing) */
+        section {
+            padding: 7.5rem 0; /* Consistent large vertical padding */
+        }
+
+        .section-light {
+            background-color: var(--color-light-bg);
+        }
+
+        /* HERO SECTION */
+        #hero {
+            background-color: var(--color-dark);
+            color: #ffffff;
+            padding: 12.5rem 0; /* Max vertical space */
+            text-align: center;
+        }
+
+        #hero h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+        }
+
+        #hero p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: var(--color-dark);
+            color: #a1a1aa;
+            padding: 3rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid #333;
+        }
+
+        .footer a {
+            color: var(--color-primary);
+        }
+
+        .footer-copyright {
+            margin-top: 0.9rem;
+            font-size: 0.8rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container nav-content">
+            <div class="logo">
+                Structural <span class="logo-accent">Sensei</span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#mission">About</a></li>
+                    <li><a href="#platforms">Platforms</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="hero">
+            <div class="container">
+                <h1>Empowering Engineers, Building a Better Future.</h1>
+                <p>Structural Sensei is your guide to mastering engineering, career growth, and financial independence. Discover the resources you need to build your professional and personal life.</p>
+                <a href="#mission" class="btn btn-primary">Learn More</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </section>
+
+        <section id="mission" class="container">
+            <div class="text-centered-block">
+                <h2>Our Mission & Status</h2>
+                <p style="font-size: 1.2em; margin-bottom: 20px;">
+                    "Welcome to the official hub of Structural Sensei. We are your dedicated mentor for mastering engineering expertise, career growth strategies, and achieving financial independence as a technical professional. Our core mission is to bridge the gap between academic knowledge and real-world professional success, delivering high-leverage guidance you won't find in a curriculum. This profile serves as the central directory for our complete suite of engineer resources, linking you directly to our deep-dive video tutorials, comprehensive digital guides, and the Structural Sensei Resource Hub. Start your journey to becoming a financially independent expert today."
+                </p>
+                <p style="font-size: 1.1em; margin-bottom: 40px; font-weight: 500;">
+                    **Structural Sensei is currently a small business expanding its expertise into knowledge transfer.** We are in an exciting phase of development, and we genuinely appreciate your support. By purchasing our digital products through the links below, you directly fund the creation of better resources and allow us to eventually launch a **full, integrated e-commerce site** in the future. Thank you for helping us grow!
+                </p>
+                <a href="#bio" style="display: inline-block; margin-top: 30px; font-weight: 600;">Meet the Sensei →</a>
+            </div>
+        </section>
+
+        <section id="bio" class="section-light">
+            <div class="container" style="display: flex; gap: 4rem; align-items: center;">
+                <div style="flex: 1;">
+                    <div style="width: 100%; height: 350px; background-color: #ccc;">
+                        <img src="profile.jpg" alt="Structural Sensei Founder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+                    </div>
+                </div>
+                <div style="flex: 2;">
+                    <h2>The Sensei Behind the Brand</h2>
+                    <p>My journey began in structural engineering, where I quickly realized the curriculum missed key lessons on career negotiation, personal branding, and building wealth. I started Structural Sensei to share the systems and strategies I developed to excel both technically and financially.</p>
+                    <p>I tie into the brand by embodying the **"Sensei"**—a mentor focused on practical mastery. My content is distilled from years of professional experience, focusing on high-leverage actions that move you from student/junior engineer to a financially independent expert.</p>
+                    <a href="#platforms" class="btn btn-secondary" style="margin-top: 20px;">See My Platforms</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="platforms" class="container">
+            <h2 style="text-align: center; margin-bottom: 60px;">Our Platforms</h2>
+            <div class="feature-grid">
+
+                <div class="feature-item">
+                    <span>Wico - Gumroad</span>
+                    <h3>Digital Shop</h3>
+                    <p>Shop our digital products, including e-books and guides on business, finance, and personal development tailored for engineers and creators.</p>
+                    <a href="https://wico.gumroad.com/" target="_blank" style="font-weight: 600;">Shop Now →</a>
+                </div>
+
+                <div class="feature-item">
+                    <span>Structural Sensei - Carrd.co</span>
+                    <h3>Resource Hub</h3>
+                    <p>Discover our hub of curated resources. This site provides actionable advice on career progression and personal finance for engineers.</p>
+                    <a href="https://structuralsensei.carrd.co/" target="_blank" style="font-weight: 600;">Visit Site →</a>
+                </div>
+
+                <div class="feature-item">
+                    <span>Structural Sensei - YouTube</span>
+                    <h3>Video Tutorials</h3>
+                    <p>Watch video tutorials, deep dives, and discussions on a variety of topics, from advanced engineering concepts to professional development.</p>
+                    <a href="https://www.youtube.com/@SrtucturalSensei" target="_blank" style="font-weight: 600;">Watch Videos →</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container section-light">
+            <div class="text-centered-block">
+                <h2>Get In Touch</h2>
+                <p style="font-size: 1.1em; margin-bottom: 40px;">
+                    We'd love to hear from you regarding collaborations, support questions, or just to share your feedback. Reach out to us directly via our dedicated email address:
+                </p>
+
+                <a href="mailto:wico.pydev@gmail.com" class="contact-email-link" style="color: var(--color-primary);">wico.pydev@gmail.com</a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p style="margin-bottom: 15px;">Mastering the art of design. | <a href="mailto:wico.pydev@gmail.com">Email Us</a></p>
+            <p class="footer-copyright">&copy; 2025 Structural Sensei. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
